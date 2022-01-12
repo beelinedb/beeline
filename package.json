@@ -1,0 +1,21 @@
+{
+  "name": "beeline",
+  "version": "0.1.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "ascii-table3": "^0.7.0",
+    "date-fns": "^2.28.0",
+    "lodash": "^4.17.21",
+    "pg": "^8.7.1",
+    "semver": "^7.3.5",
+    "yaml": "^2.0.0-10",
+    "yargs": "^17.3.1"
+  },
+  "devDependencies": {
+    "mocha": "^9.1.3"
+  }
+}
