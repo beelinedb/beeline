@@ -60,7 +60,6 @@ exports.handler = async (argv) => {
   const name = argv.name.replace(/\s/g, "_");
 
   //Create path to the new migration file.
-  //console.log("argv", argv);
   const newFiles = [
     `${migrationDirectory}/V${currentVersion.version}__${name}.sql`,
   ];
