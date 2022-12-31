@@ -3,7 +3,9 @@
   "description": "Beeline, a command line SQL database migration tool.",
   "version": "0.1.0",
   "main": "index.js",
+  "bin": "./index.js",
   "license": "MIT",
+  "private": true,
   "scripts": {
     "test": "mocha"
   },
@@ -21,9 +23,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/yargs/yargs.git"
+    "url": "https://github.com/beelinedb/beeline.git"
   },
-  "homepage": "https://yargs.js.org/",
+  "homepage": "https://beelinedb.com",
   "keywords": [
     "sql",
     "postgres",
