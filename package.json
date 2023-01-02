@@ -1,5 +1,5 @@
 {
-  "name": "beeline",
+  "name": "beelinedb",
   "description": "Beeline, a command line SQL database migration tool.",
   "version": "0.1.1-alpha.0",
   "main": "index.js",
