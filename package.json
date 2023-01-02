@@ -1,7 +1,7 @@
 {
   "name": "beelinedb",
   "description": "Beeline, a command line SQL database migration tool.",
-  "version": "0.1.1-alpha.1",
+  "version": "0.1.1-alpha.2",
   "main": "index.js",
   "bin": "./index.js",
   "license": "MIT",
