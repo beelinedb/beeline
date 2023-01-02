@@ -10,6 +10,7 @@ const {
   getMigrationDirectory,
   getChecksum,
   getMigrationFileRegex,
+  databaseConnectionBuilderOptions,
 } = require("../lib");
 const semver = require("semver");
 
@@ -120,12 +121,14 @@ async function insertSchemaHistory(client, argv, path, data) {
 exports.command = "migrate";
 exports.desc = "run most recent migration scripts";
 exports.builder = {
+  ...databaseConnectionBuilderOptions,
   "dry-run": {
     desc: "Dry run option allows you to test the migration without committing changes",
     type: "boolean",
     default: false,
   },
 };
+
 exports.handler = async (argv) => {
   //(1) Connect to the database
   const client = await connectToDB(argv);

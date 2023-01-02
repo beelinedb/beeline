@@ -28,6 +28,7 @@ exports.builder = (yargs) => {
       description: "Migration directory",
       type: "string",
       alias: "m",
+      default: "sql",
     })
     .option("undo", {
       description:
@@ -39,7 +40,7 @@ exports.builder = (yargs) => {
 };
 
 exports.handler = async (argv) => {
-  const migrationDirectory = getMigrationDirectory(argv);
+  const migrationDirectory = getMigrationDirectory(argv, true);
 
   //Read all the files in the migration directory.
   const files = fs.readdirSync(migrationDirectory);

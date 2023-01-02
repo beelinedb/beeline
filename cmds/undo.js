@@ -4,6 +4,7 @@ const {
   connectToDB,
   getHistoryTableAndSchema,
   getMigrationDirectory,
+  databaseConnectionBuilderOptions,
 } = require("../lib");
 
 async function getPathToNextUndoableMigration(client, argv) {
@@ -30,6 +31,14 @@ async function getPathToNextUndoableMigration(client, argv) {
 
 exports.command = "undo";
 exports.desc = "undo most recent migration";
+exports.builder = {
+  ...databaseConnectionBuilderOptions,
+  "dry-run": {
+    desc: "Dry run option allows you to test the migration without committing changes",
+    type: "boolean",
+    default: false,
+  },
+};
 exports.handler = async (argv) => {
   //(1) Connect to the database
   const client = await connectToDB(argv);

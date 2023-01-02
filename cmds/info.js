@@ -7,23 +7,15 @@ const {
   getDatabaseConnectionInfo,
   connectToDB,
   getHistoryTableAndSchema,
+  databaseConnectionBuilderOptions,
 } = require("../lib");
 const { AsciiTable3, AlignmentEnum } = require("ascii-table3");
 const formatISO = require("date-fns/formatISO");
 
 exports.command = "info";
-exports.desc = "print latest info on migration";
-exports.builder = {
-  url: {
-    describe: "url to use to connect to database",
-  },
-  user: {
-    describe: "user used to connect to database",
-  },
-  password: {
-    describe: "password used to connect to database",
-  },
-};
+exports.desc =
+  "Display migration history current stored in the migration table";
+exports.builder = { ...databaseConnectionBuilderOptions };
 exports.handler = async (argv) => {
   const client = await connectToDB(argv);
   const { schema, table } = getHistoryTableAndSchema(argv);
