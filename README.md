@@ -8,7 +8,7 @@ Beeline can be downloaded from the NPM repository and installed globally
 on your local machine as follows:
 
 ```sh copy
-npm intall -g beelinedb
+npm install -g beelinedb
 ```
 
 You can test that Beeline has been installed correctly by attempting to access the Beeline help menu from the command line. If everything is working properly, you will see a list of the commands currently supported by Beeline.
@@ -213,4 +213,3 @@ You should see that the database has been rolled back to its previous state.
 ### Step 7 - In Summary
 
 This tutorial showed you the basics on how to use Beeline to help you manage the process of migrating your databases. You can refer to the [command reference](https://www.beelinedb.com/refersection) for a full analysis of all the features available in Beeline.
-
