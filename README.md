@@ -4,12 +4,14 @@ Beeline is a command-line interface for managing SQL database migrations. It wor
 
 # Installation Instructions
 
-Beeline can be downloaded from the NPM repository and installed globally
-on your local machine as follows:
+Beeline can be downloaded from the NPM repository called `beelinedb` and installed globally
+on your local machine under the alias `beeline` using the following command:
 
 ```sh copy
-npm install -g beelinedb
+npm install -g beeline@npm:beelinedb
 ```
+
+You do not have to use an alias, but please be aware that most of the examples in this document assume its use and you may need to make adjustments if you choose not to use it (i.e. replace `beeline` with `beelinedb` when you see it in the examples)
 
 You can test that Beeline has been installed correctly by attempting to access the Beeline help menu from the command line. If everything is working properly, you will see a list of the commands currently supported by Beeline.
 
